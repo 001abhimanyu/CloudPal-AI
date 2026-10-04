@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudPal AI - Your Cloud Learning Friend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+            <h2>☁ CloudPal</h2>
+            <p class="tagline">Your Cloud Learning Friend</p>
+
+            <button class="new-chat" onclick="clearChat()">
+                + New Chat
+            </button>
+
+            <h4>LEARNING TOPICS</h4>
+
+            <button class="topic" onclick="askTopic('What is Cloud Computing?')">
+                ☁ Cloud Computing
+            </button>
+
+            <button class="topic" onclick="askTopic('What is AWS?')">
+                🟠 AWS
+            </button>
+
+            <button class="topic" onclick="askTopic('What is Microsoft Azure?')">
+                🔵 Microsoft Azure
+            </button>
+
+            <button class="topic" onclick="askTopic('What is DevOps?')">
+                ⚙ DevOps
+            </button>
+
+            <button class="topic" onclick="askTopic('What is Docker?')">
+                🐳 Docker
+            </button>
+
+            <button class="topic" onclick="askTopic('What is Kubernetes?')">
+                ☸ Kubernetes
+            </button>
+
+            <button class="topic" onclick="askTopic('Explain Linux')">
+                🐧 Linux
+            </button>
+
+            <div class="sidebar-footer">
+                <p>Built for Hacktoberfest ❤️</p>
+                <small>Open Source Learning Project</small>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <header class="header">
+                <div>
+                    <h2>CloudPal Assistant</h2>
+                    <p>Your personal Cloud & DevOps learning companion</p>
+                </div>
+
+                <div class="status">
+                    <span></span> Online
+                </div>
+            </header>
+
+            <section class="chat-area" id="chatArea">
+
+                <div class="welcome" id="welcome">
+                    <div class="welcome-icon">☁️</div>
+                    <h1>Hey! I'm CloudPal 👋</h1>
+                    <p>
+                        Your friendly Cloud and DevOps learning assistant.
+                        Ask me questions, practice interviews, or take quizzes!
+                    </p>
+
+                    <div class="suggestions">
+                        <button onclick="askTopic('What is Cloud Computing?')">
+                            What is Cloud Computing?
+                        </button>
+
+                        <button onclick="askTopic('Explain Docker')">
+                            Explain Docker
+                        </button>
+
+                        <button onclick="askTopic('Give me a DevOps quiz')">
+                            Start a DevOps Quiz
+                        </button>
+
+                        <button onclick="askTopic('Ask me an interview question')">
+                            Interview Practice
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="input-section">
+                <div class="input-box">
+                    <input type="text" id="userInput" placeholder="Ask anything about Cloud, AWS, Azure, DevOps..."
+                        onkeydown="handleEnter(event)">
+
+                    <button onclick="sendMessage()">➤</button>
+                </div>
+
+                <p class="disclaimer">
+                    CloudPal uses built-in learning content. No API token required.
+                </p>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
